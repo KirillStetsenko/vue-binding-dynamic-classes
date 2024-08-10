@@ -1,20 +1,28 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
+import SimpleString from "../views/SimpleString.vue";
+import ArrayClasses from "../views/ArrayClasses.vue";
+import ObjectSyntax from "../views/ObjectSyntax.vue";
+import CombiningClasses from "../views/CombiningClasses.vue";
+import MethodSyntax from "../views/MethodSyntax.vue";
+import ObjectProperty from "../views/ObjectProperty.vue";
+import ComputedProperties from "../views/ComputedProperties.vue";
 
 const routes = [
+  { path: "/simpleString", component: SimpleString },
+  { path: "/arrayClasses", component: ArrayClasses },
+  { path: "/objectSyntax", component: ObjectSyntax },
   {
-    path: "/",
-    name: "home",
-    component: HomeView,
+    path: "/combiningClasses",
+    component: CombiningClasses,
+  },
+  { path: "/methodSyntax", component: MethodSyntax },
+  {
+    path: "/objectProperty",
+    component: ObjectProperty,
   },
   {
-    path: "/about",
-    name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+    path: "/computedProperties",
+    component: ComputedProperties,
   },
 ];
 
